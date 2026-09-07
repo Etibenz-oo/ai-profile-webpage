@@ -1,147 +1,199 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marvelous | Personal Profile</title><style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+<title>Marvelous | Personal Profile</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #1f2937;
-    line-height: 1.6;
-}
-nav {
-        background: #ffffff;
-        padding: 15px 20px;
-        text-align: center;
-        box-shadow: 0 2px 10px
-rgba(0, 0, 0.08); 
-}        
-
-nav a {
-     color: #111827;
-     text-decoration: none;
-     margin: 0 12px
-     font-weight: bold;
- }
- nav a:hover {
-     text-decoration:underline;
- }    
-     
-header {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.6;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+nav{
+    background:#fff;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-header p {
-    font-size: 18px;
-    opacity: 0.85;
+nav a{
+    text-decoration:none;
+    color:#111827;
+    margin:0 12px;
+    font-weight:bold;
 }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+nav a:hover{
+    text-decoration:underline;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+.hero{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
 }
 
-.card h2 {
-    margin-bottom: 12px;
-    font-size: 25px;
+.hero img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    margin:20px 0;
+    border:4px solid white;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
 }
 
-.skill {
-    background: #e5e7eb;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+.card{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 22px;
-    background: #111827;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+.card h2{
+    margin-bottom:15px;
 }
 
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    color: #6b7280;
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
+.skill{
+    background:#e5e7eb;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.projects{
+    display:grid;
+    gap:15px;
+    margin-top:15px;
+}
+
+.project{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:18px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    background:#111827;
+    color:white;
+    padding:12px 22px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#6b7280;
+}
+
+@media(max-width:600px){
+    .hero h1{font-size:32px;}
+    nav a{
+        display:inline-block;
+        margin:5px;
+        font-size:14px;
     }
-
-    .card {
-        padding: 22px;
-    }
 }
-</style></head><body><header>
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#goal">Goal</a>
+</nav>
+
+<section class="hero">
     <h1>Etibens Marvelous</h1>
     <p>Student • Technology Enthusiast • Problem Solver</p>
-</header><main class="container"><section class="card">
-    <h2>About Me</h2>
-    <p>
-        Welcome to my personal webpage. I'm interested in technology,
-        learning new skills, and building useful digital projects.
-    </p>
+
+    <img src="webdev.png" alt="Web development themed image">
 </section>
 
-<section class="card">
-    <h2>My Skills</h2>
+<div class="container">
 
-    <div class="skills">
-        <span class="skill">Communication</span>
-        <span class="skill">Technical Support</span>
-        <span class="skill">Microsoft Excel</span>
-        <span class="skill">Problem Solving</span>
-        <span class="skill">Learning Technology</span>
-    </div>
-</section>
+    <section class="card" id="about">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my personal webpage. I'm passionate about technology,
+            learning new skills, and building useful digital projects.
+        </p>
+    </section>
 
-<section class="card">
-    <h2>My Goal</h2>
-    <p>
-        My goal is to continue developing my technical skills and create
-        projects that are useful, practical, and easy to use.
-    </p>
+    <section class="card" id="skills">
+        <h2>My Skills</h2>
 
-    <a href="#" class="button">Explore My Work</a>
-</section>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Technical Support</span>
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Problem Solving</span>
+        </div>
+    </section>
 
-</main><footer>
+    <section class="card" id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+            <div class="project">
+                <h3>Personal Profile Webpage</h3>
+                <p>A responsive personal profile webpage built using HTML and CSS.</p>
+            </div>
+
+            <div class="project">
+                <h3>Learning Journey</h3>
+                <p>Continuous practice projects to improve my web development skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card" id="goal">
+        <h2>My Goal</h2>
+        <p>
+            My goal is to continue improving my technical skills and create
+            practical digital solutions.
+        </p>
+
+        <a href="#" class="button">Explore My Work</a>
+    </section>
+
+</div>
+
+<footer>
     <p>© 2026 Etibens Marvelous. All rights reserved.</p>
-</footer></body>
+</footer>
+
+</body>
 </html>
